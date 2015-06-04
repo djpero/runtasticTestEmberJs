@@ -12,7 +12,15 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' intense-bastion-3210.herokuapp.com",
+      'font-src': "'self'",
+      'connect-src': "'self' http://intense-bastion-3210.herokuapp.com",
+      'img-src': "'self'",
+      'style-src': "'self' http://fonts.googleapis.com/css?family=Open+Sans:400,700,300",
+      'media-src': "'self'"
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
