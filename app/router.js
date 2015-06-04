@@ -6,8 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('rdata');
-	this.resource('rdata', { path: '/' });
+  this.route('rdata');
+  this.resource('rdata', { path: '/' });
+  this.route('sessions');
 });
 
 export default Router;
