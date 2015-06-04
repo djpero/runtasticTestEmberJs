@@ -15,7 +15,9 @@ export default Ember.Route.extend({
            return store;
         });
     },
-
+    setupController: function(controller,model) {
+      controller.set('list', model);
+    }
 
 
 });
