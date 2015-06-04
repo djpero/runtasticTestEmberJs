@@ -1,1 +1,68 @@
-{{outlet}}
+
+	<section id="content">
+		<table id="table_run_sessions">
+			<thead>
+				<th class="sortable" data-sort-key="id">ID</th>
+				<th class="sortable" data-sort-key="start_time">START TIME</th>
+				<th class="sortable" data-sort-key="end_time">END TIME</th>
+				<th class="sortable" data-sort-key="duration">DURATION</th>
+				<th class="sortable" data-sort-key="distance">DISTANCE</th>
+				<th class="sortable" data-sort-key="sport_type_id">SPORT TYPE ID</th>
+			</thead>
+			<tbody>
+				{{outlet}}
+			</tbody>
+		</table>
+		<div class="table-footer">
+			<div id="table-pagination">
+				<p id="prev" class="nav">Prev</p>
+				<p id="next" class="nav">Next</p>
+				<p id="current-avaiable" class="pages"></p>
+			</div>
+			<div id="table-order">
+				<select id="table_sort">
+					<option>Descending</option>
+					<option>Ascending</option>
+				</select>
+			</div>	
+		</div>
+
+	</section>
+	<div id="popup-back">
+		<article id="popup-detail-view">
+			<div id="content">
+				<h1 id="result_id">ID <span></span></h1>	
+				<div id="result_detail">
+					<table>
+						<tbody>
+							<tr>
+								<td>Start time</td>
+								<td id="result_start_time" class="results"></td>
+							</tr>
+							<tr>
+								<td>End time</td>
+								<td id="result_end_time" class="results"></td>
+							</tr>
+							<tr>
+								<td>Duration</td>
+								<td id="result_duration" class="results"></td>
+							</tr>
+							<tr>
+								<td>Distance</td>
+								<td id="result_distance" class="results"></td>
+							</tr>
+							<tr>
+								<td>Sport Type ID</td>
+								<td id="result_sport_type_id" class="results"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="map-canvas"></div>
+				</div>
+			</div>
+			<div id="footer">
+				<button id="close">Close</button>
+			</div>
+		</article>
+	</div>
+
