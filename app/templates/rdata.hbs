@@ -1,1 +1,11 @@
-{{outlet}}
+
+{{#each item in list}}
+	<tr>
+		<td>{{item.sessionId}}</td>
+		<td>{{item.startAt}}</td>
+		<td>{{item.endAt}}</td>
+		<td>{{item.duration}}</td>
+		<td>{{item.distance}}</td>
+		<td>{{item.typeId}}</td>
+	</tr>
+{{/each}}
